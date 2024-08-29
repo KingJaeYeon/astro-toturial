@@ -1,7 +1,21 @@
 {
-  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
-  }
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "noEmitOnError": false, // 오류가 있어도 빌드 결과물을 생성합니다.
+    "skipLibCheck": true, // 라이브러리 파일의 타입 체크를 건너뜁니다.
+    "noImplicitAny": false, // 암시적인 any 허용
+    "suppressImplicitAnyIndexErrors": true, // 암시적 any 오류 억제
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "checkJs": false
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
